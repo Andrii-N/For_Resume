@@ -4,7 +4,7 @@ import time
 
 class ProductPage(BasePage):
     def should_be_able_add_to_basket(self):
-        self.should_be_product_page_url()
+        #self.should_be_product_page_url()
         self.should_be_add_to_basket_button()
         self.should_be_product_price_info()
         self.add_to_basket()
@@ -13,8 +13,8 @@ class ProductPage(BasePage):
         self.should_be_same_product_name_in_massage_and_selected_product_name()
         self.should_be_same_price_of_the_product_and_basket()
 
-    def should_be_product_page_url(self):
-        assert '?promo=newYear' in self.url, "Promo not includded in URL"
+    #def should_be_product_page_url(self):
+        #assert '?promo=newYear' in self.url, "Promo not includded in URL"
 
 
     def should_be_add_to_basket_button(self):
