@@ -6,9 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
 import math
 
-
-
-
 class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
@@ -49,6 +46,10 @@ class BasePage():
             return False
 
         return True
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), \
+            "User icon is not presented, probably unauthorised user"
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK),\
