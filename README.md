@@ -1,2 +1,1 @@
-# For_Review 
-Stepik Final Task
+Repository for my Resume files.
